@@ -1,5 +1,4 @@
 <script>
-import AppSearch from './AppSearch.vue';
 import {store} from '../store.js';
 export default {
   data() {
@@ -8,7 +7,6 @@ export default {
     }
   },
   components:{
-   AppSearch,
   }
 }
 </script>
