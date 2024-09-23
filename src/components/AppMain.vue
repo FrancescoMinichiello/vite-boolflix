@@ -1,20 +1,20 @@
 <script>
-import AppSearch from './AppSearch.vue';
+import AppHeader from './AppHeader.vue';
 import {store} from '../store.js';
 export default {
   data() {
     return {
+      AppHeader,
       store,
     }
   },
   components:{
-   AppSearch,
   }
 }
 </script>
 
 <template>
-  <AppSearch/>
+  <AppHeader/>
 </template>
 
 <style lang="scss" scoped>

@@ -13,17 +13,6 @@ export default {
     AppMain,
     AppHeader
   },
-  methods:{
-        getMovie(){
-        axios.get(store.apiUrl)
-        .then((result)=>{
-            console.log(result)
-        })
-        .catch(function(error){
-            console.log(error)
-        });
-        }
-    },
 }
 </script>
 
