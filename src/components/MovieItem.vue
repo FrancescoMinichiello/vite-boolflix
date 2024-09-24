@@ -19,7 +19,7 @@ export default {
       if(vote){
         return(vote/2).toFixed(1)
       } else {
-        'Voto non disponibile'
+        return 'Voto non disponibile'
       }
   }
 }
