@@ -17,10 +17,7 @@ export default {
 
 <template>
     <div>
-      <div v-if="movieList.length === 0">
-        <p>Mi dispiace! Nessun film corrisponde alla ricerca!</p>
-      </div>
-      <div v-else>
+      <div class="movie d-flex flex-wrap justify-content-center gap-3">
         <MovieItem v-for="movie in movieList" :key="movie.id" :movie="movie" />
       </div>
     </div>
@@ -28,4 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 @use 'bootstrap/scss/bootstrap.scss' as *;
+.movie{
+  background-color: grey;
+}
 </style>

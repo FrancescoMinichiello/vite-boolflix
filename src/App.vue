@@ -16,10 +16,20 @@ export default {
 </script>
 
 <template>
-  <AppHeader/>
+  <header>
+    <AppHeader/>
+</header>
   <MovieList/>
 </template>
 
 <style lang="scss" scoped>
 @use 'bootstrap/scss/bootstrap.scss' as *;
+header{
+  background-color: black;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
 </style>

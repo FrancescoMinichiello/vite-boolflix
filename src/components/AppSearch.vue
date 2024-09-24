@@ -39,7 +39,7 @@ export default {
 </script>
 
 <template>
-<div class="input-group mb-3">
+<div class="input-group w-25">
   <input v-model="searchedMovie" @keyup.enter="search" type="text" class="form-control" placeholder="Cerca un film..." aria-label="Recipient's username" aria-describedby="button-addon2">
   <button @click="search" class="btn btn-outline-secondary" type="button" id="button-addon2">Cerca</button>
 </div>
@@ -47,4 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 @use 'bootstrap/scss/bootstrap.scss' as *;
+.input-group{
+  background-color: white;
+}
 </style>
