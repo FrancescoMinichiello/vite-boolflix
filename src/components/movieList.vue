@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-    <div class="movie-list">
+    <div>
       <div v-if="movieList.length === 0">
         <p>Mi dispiace! Nessun film corrisponde alla ricerca!</p>
       </div>
