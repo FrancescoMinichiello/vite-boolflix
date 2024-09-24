@@ -5,15 +5,15 @@ import {store} from '../store.js';
 export default {
   data() {
     return {
-      store,
+      searchedMovie: '',
     }
   },
   components:{
   },
   methods:{
-    onSearch(){
-     if(store.searchedMovie.trim() !==''){
-      this.searchMovies
+    search(){
+     if(this.searchedMovie.trim() !==''){
+      this.searchMovies()
      }
       },
       searchMovies() {
@@ -23,7 +23,7 @@ export default {
       axios.get(url,{
         params:{
           api_key: apiKey,
-          query: store.searchedMovie,
+          query: this.searchedMovie,
           language: 'it-IT'
         }
       })
@@ -40,8 +40,8 @@ export default {
 
 <template>
 <div class="input-group mb-3">
-  <input v-model="store.searchedMovie" @keyup.enter="onSearch" type="text" class="form-control" placeholder="Cerca un film..." aria-label="Recipient's username" aria-describedby="button-addon2">
-  <button @click="onSearch" class="btn btn-outline-secondary" type="button" id="button-addon2">Cerca</button>
+  <input v-model="searchedMovie" @keyup.enter="search" type="text" class="form-control" placeholder="Cerca un film..." aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button @click="search" class="btn btn-outline-secondary" type="button" id="button-addon2">Cerca</button>
 </div>
 </template>
 

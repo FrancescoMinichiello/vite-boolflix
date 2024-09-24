@@ -1,5 +1,5 @@
 <script>
-import AppSearch from './AppSearch.vue';
+import AppSearch from '../components/AppSearch.vue';
 import {store} from '../store.js';
 export default {
   data() {

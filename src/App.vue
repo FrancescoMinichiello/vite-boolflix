@@ -1,24 +1,23 @@
 <script>
-import axios from 'axios';
+import MovieList from './components/MovieList.vue';
 import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue';
 import {store} from './store.js'
 export default {
   data() {
     return {
-      
+      store,
     }
   },
   components:{
     AppHeader,
-    AppMain,
+    MovieList
   },
 }
 </script>
 
 <template>
   <AppHeader/>
-  <AppMain/>
+  <MovieList/>
 </template>
 
 <style lang="scss" scoped>
