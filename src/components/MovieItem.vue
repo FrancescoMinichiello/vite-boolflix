@@ -13,8 +13,16 @@ export default {
       if (posterPath) {
         return 'https://image.tmdb.org/t/p/w342' + posterPath;
       }
-    }
+    },
+    rating() {
+      const vote = this.movie.vote_average;
+      if(vote){
+        return(vote/2).toFixed(1)
+      } else {
+        'Voto non disponibile'
+      }
   }
+}
 };
 </script>
 
@@ -24,7 +32,7 @@ export default {
       <h2>{{ movie.title }}</h2>
       <h3>Titolo originale: {{ movie.original_title }}</h3>
       <p>Lingua originale: {{ movie.original_language }}</p>
-      <p>Voto: {{ movie.vote_average }}</p>
+      <p>Voto: {{ rating }}</p>
     </div>
 </template>
 
